@@ -41,6 +41,10 @@
     padding: 30px 0;
 }
 
+/* .right {
+    float: right;
+} */
+
 .outer-wrap-footer {
     background-color: #1d5937;
     color: white;
@@ -62,4 +66,14 @@
 
 .my-navbar li {
     display: inline;
+}
+
+.byline {
+    border: 1px solid;
+    width: 50%;
+}
+
+.column.footer-column {
+    display: inline-block;
+    text-align: center;
 }

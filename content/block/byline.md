@@ -1,5 +1,5 @@
 <div class="byline">
-<figure class="img_byline">
+<figure class="imgByline">
     <img src="img/me_byline.jpg" alt="Björn Olsson">
     </figure>
     <p>Sidan är skapad av Björn Olsson som en del kursen designv2.
