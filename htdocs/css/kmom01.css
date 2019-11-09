@@ -55,11 +55,22 @@
 
 .article {
     font-family: sans-serif;
+    min-height: 20em;
+}
+
+.figure.right {
+    float: right;
+    margin: 1em;
 }
 
 .article p {
     font-size: 18px;
     margin: 1em;
+}
+
+.region-sidebar-right.has-sidebar-right.has-sidebar .block {
+    width: 100%;
+    margin-bottom: 2em;
 }
 
 .block.toc {
@@ -89,11 +100,6 @@
 
 .region-flash img {
     width: 100%;
-}
-
-.figure.right {
-    float: right;
-    margin: 1em;
 }
 
 .outer-wrap-header {
@@ -176,4 +182,14 @@
 
 .footer-column:last-child {
     border-right: none;
+}
+
+@media (max-width: 1100px) {
+    .byline {
+        width: 100%;
+    }
+    .footer-column {
+        display: block;
+        border: none;
+    }
 }
