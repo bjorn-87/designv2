@@ -1,3 +1,3 @@
-#### Footer col 1
+#### Kursen
 
-Med brödtext i ett stycke som säger något trevligt om just detta block, eller kanske en lista av länkar.
+kursens hemsida på [dbwebb.se](https://dbwebb.se/kurser/design-v2)

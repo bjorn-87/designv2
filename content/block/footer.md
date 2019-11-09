@@ -1,1 +1,1 @@
-Copyright 2019 Björn Olsson.
+Copyright 2019 | Björn Olsson.
