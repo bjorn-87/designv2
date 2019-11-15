@@ -1,0 +1,195 @@
+/*!
+ * Stylesheet for design kmom01.
+ *
+ * This stylesheet is for the design course and kmom01. Fill it with style
+ * to style up the website so it is useable.
+ */
+
+/* Poor-mans normalize */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hide submenu, leave this to kmom02 */
+.rm-desktop ul {
+    display: none;
+}
+
+/* Hide responsive/mobile menu, leave this to kmom02 */
+.rm-navbar-max {
+    display: none;
+}
+
+/* Container */
+
+.wrap-all {
+    background-color: #fdffe4;
+    margin: 0 auto;
+}
+
+.outer-wrap {
+    width: 100%;
+}
+
+.breadcrumb-list li,
+.inner-wrap-main li {
+    list-style-type: none;
+}
+
+.inner-wrap {
+    margin: 0 auto;
+    width: 60%;
+}
+
+.inner-wrap-main {
+    padding: 30px 0;
+    min-height: 40em;
+}
+
+.inner-wrap-main .row {
+    display: flex;
+    flex-direction: row;
+}
+
+.article {
+    font-family: sans-serif;
+    min-height: 20em;
+}
+
+.figure.right {
+    float: right;
+    margin: 1em;
+}
+
+.article p {
+    font-size: 18px;
+    margin: 1em;
+}
+
+.region-sidebar-right.has-sidebar-right.has-sidebar .block {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.block.toc {
+    float: left;
+    margin-right: 4em;
+    width: 100%;
+}
+
+.next {
+    float: right;
+}
+
+/* Header */
+
+.site-logo {
+    display: none;
+}
+
+.site-logo-text-icon {
+    float: left;
+}
+
+.site-logo-text {
+    font-size: 30px;
+    font-style: italic;
+}
+
+.region-flash img {
+    width: 100%;
+}
+
+.outer-wrap-header {
+    background-color: #5b4b41;
+}
+
+.outer-wrap-header a {
+    color: white;
+    text-decoration: none;
+}
+
+.my-navbar {
+    list-style-type: none;
+    text-align: center;
+    margin: 1em;
+    font-family: sans-serif;
+    padding-bottom: 1em;
+}
+
+.my-navbar li {
+    display: inline;
+}
+
+.my-navbar a {
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 0.5em
+}
+
+.my-navbar a:hover {
+    text-decoration: underline;
+}
+
+/* byline */
+
+.byline {
+    clear: both;
+    border: 1px solid;
+    width: 60%;
+    padding: 1em;
+    overflow: auto;
+    margin-top: 30px;
+}
+
+.byline img {
+    width: 80px;
+    float: left;
+    margin: 0.5em
+}
+
+/* footer */
+
+.outer-wrap-footer {
+    background-color: #1d5937;
+    color: white;
+    min-height: 20em;
+}
+
+.outer-wrap-footer a {
+    color: white;
+}
+
+.inner-wrap-footer {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.region-footer>.block {
+    padding-top: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-column {
+    display: inline-block;
+    border-right: 1px solid;
+    text-align: center;
+    padding: 2em;
+}
+
+.footer-column:last-child {
+    border-right: none;
+}
+
+@media (max-width: 1100px) {
+    .byline {
+        width: 100%;
+    }
+    .footer-column {
+        display: block;
+        border: none;
+    }
+}
