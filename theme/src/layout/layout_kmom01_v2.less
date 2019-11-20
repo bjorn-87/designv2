@@ -1,0 +1,172 @@
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+
+/**
+ * Variables
+ */
+
+
+/**
+ * General layout
+ */
+
+/* Hide submenu, leave this to kmom02 */
+.rm-desktop ul {
+    display: none;
+}
+
+/* Hide responsive/mobile menu, leave this to kmom02 */
+.rm-navbar-max {
+    display: none;
+}
+
+
+
+ .wrap-all {
+     margin: 0 auto;
+ }
+
+ .outer-wrap {
+     width: 100%;
+ }
+
+.inner-wrap {
+    margin: 0 auto;
+}
+
+.breadcrumb-list li,
+.inner-wrap-main li {
+    list-style-type: none;
+}
+
+.inner-wrap-main {
+    padding: 30px 0;
+    min-height: 40em;
+}
+
+.inner-wrap-main .row {
+    display: flex;
+    flex-direction: row;
+}
+
+.article {
+    font-family: sans-serif;
+    min-height: 20em;
+}
+
+.figure.right {
+    float: right;
+    margin: 1em;
+}
+
+.article p {
+    font-size: 18px;
+    margin: 1em;
+}
+
+.region-sidebar-right.has-sidebar-right.has-sidebar .block {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.block.toc {
+    float: left;
+    margin-right: 4em;
+    width: 100%;
+}
+
+.next {
+    float: right;
+}
+
+/* Header */
+
+.site-logo {
+    display: none;
+}
+
+.site-logo-text-icon {
+    // float: left;
+}
+
+.site-logo-text {
+    font-size: 30px;
+    font-style: italic;
+}
+
+.region-flash img {
+    width: 100%;
+}
+
+.outer-wrap-header a {
+    text-decoration: none;
+}
+
+.my-navbar {
+    list-style-type: none;
+    text-align: center;
+    margin: 1em 1em 0;
+    font-family: sans-serif;
+    padding-bottom: 1em;
+}
+
+.my-navbar li {
+    display: inline;
+}
+
+.my-navbar a {
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 0.5em;
+}
+
+.my-navbar a:hover {
+    text-decoration: underline;
+}
+
+/* byline */
+
+.byline {
+    clear: both;
+    border: 1px solid;
+    width: 60%;
+    padding: 1em;
+    overflow: auto;
+    margin-top: 30px;
+}
+
+.byline img {
+    width: 80px;
+    float: left;
+    margin: 0.5em
+}
+
+/* footer */
+
+.outer-wrap-footer {
+    min-height: 20em;
+}
+
+.inner-wrap-footer {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.region-footer>.block {
+    padding-top: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-column {
+    display: inline-block;
+    border-right: 1px solid;
+    text-align: center;
+    padding: 2em;
+}
+
+.footer-column:last-child {
+    border-right: none;
+}
