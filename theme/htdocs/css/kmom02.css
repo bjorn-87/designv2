@@ -4749,6 +4749,10 @@ template {
 /**
  * Base style to affect HTML elements on a general scale.
  */
+/* Poor-mans normalize */
+* {
+  box-sizing: border-box;
+}
 html {
   overflow-y: scroll;
   background-color: #424242;
@@ -4762,9 +4766,6 @@ body {
 }
 img {
   max-width: 100%;
-}
-.region-main {
-  margin: 1em;
 }
 /**
 * Layout style for general structure of header, navbar, main, footer
@@ -4954,6 +4955,9 @@ img {
   background-color: beige;
   margin: 0 auto;
 }
+.region-main {
+  margin: 1em;
+}
 .inner-wrap {
   width: 100%;
 }
@@ -4982,7 +4986,7 @@ img {
 /**
  * Layout for responsive style through media queries.
  */
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1000px) {
   /**
      * Header
      */
