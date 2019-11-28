@@ -4732,18 +4732,6 @@ template {
   font-family: 'Font Awesome 5 Brands';
 }
 /**
-* Internal self contained modules, save in directory module/.
-*/
-/**
- * Style for the stylechooser.
- */
-/**
- * Variables
- */
-/**
- * Style
- */
-/**
 * Base style to affect HTML elements on a general scale.
 */
 /**
@@ -4755,14 +4743,14 @@ template {
 }
 html {
   overflow-y: scroll;
-  background-color: #424242;
+  background-color: #1d5937;
 }
 body {
   margin: 0;
   padding: 0;
   color: #333;
-  background-color: #fff;
-  font: 16px/1.5 Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: beige;
+  font: 16px/1.5 'Sintony', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 img {
   max-width: 100%;
@@ -4773,7 +4761,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Cambria, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Roboto', sans-serif;
   margin-top: 24px;
   margin-bottom: 24px;
 }
@@ -5132,11 +5120,11 @@ hr::after {
 * General layout
 */
 .row {
+  max-width: 100%;
   display: block;
   width: 101.04166667%;
   margin-left: -0.52083333%;
   margin-right: -0.52083333%;
-  margin-bottom: 12px;
 }
 .row::after {
   content: "";
@@ -5159,24 +5147,20 @@ hr::after {
   }
 }
 .vgrid .inner-wrap.inner-wrap-header,
-.vgrid .inner-wrap.inner-wrap-flash,
-.vgrid .inner-wrap.inner-wrap-footer {
+.vgrid .inner-wrap.inner-wrap-flash {
   background: url("../img/grid_24x30x10-nomargin.png") repeat-y scroll center center;
   background-size: 100% auto;
 }
 @media (min-width: 100%) {
   .vgrid .inner-wrap.inner-wrap-header,
-  .vgrid .inner-wrap.inner-wrap-flash,
-  .vgrid .inner-wrap.inner-wrap-footer {
+  .vgrid .inner-wrap.inner-wrap-flash {
     background-size: 100% auto;
   }
 }
 .breadcrumb-list li,
 .inner-wrap-main li {
   list-style-type: none;
-}
-.article {
-  font-family: sans-serif;
+  display: inline;
 }
 .next-previous {
   display: inline;
@@ -5184,23 +5168,32 @@ hr::after {
   width: 98.95833333%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
+  margin-bottom: 1.5em;
 }
-.previous,
 .next {
-  display: inline;
-  float: left;
-  width: 48.95833333%;
-  margin-left: 0.52083333%;
-  margin-right: 0.52083333%;
+  float: right;
 }
 .flashmessage.info {
   border: 1px solid green;
+  display: inline;
+  float: left;
+  width: 73.95833333%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+  margin-left: 13.02083333%;
   text-align: center;
 }
 .region-flash {
   margin-right: auto;
   margin-left: auto;
   max-width: 100%;
+}
+.region-flash img {
+  display: inline;
+  float: left;
+  width: 415.625%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
 }
 .region-breadcrumb {
   display: inline;
@@ -5210,7 +5203,10 @@ hr::after {
   margin-right: 0.52083333%;
 }
 .breadcrumb-list ul {
-  background-color: beige;
+  padding-top: 12px;
+}
+.breadcrumb-list li:last-child {
+  margin-left: 4.6875%;
 }
 .region-main {
   display: inline;
@@ -5219,6 +5215,7 @@ hr::after {
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
   margin-left: 13.02083333%;
+  margin-bottom: 1.5rem;
 }
 .region-main.has-sidebar {
   margin-left: 0.52083333%;
@@ -5267,11 +5264,30 @@ hr::after {
 .inner-wrap-main {
   background-color: beige;
 }
+.figure.right {
+  float: right;
+  margin-top: 0;
+}
+.figure {
+  margin-bottom: 24px;
+}
+.figure img {
+  margin-bottom: 16px;
+}
 .toc li a {
   display: block;
 }
 .block.toc h4 {
   text-align: center;
+  background-color: lightgray;
+}
+.block.toc a {
+  text-decoration: none;
+  color: #333;
+  margin: 16px 0 24px;
+}
+.block.toc a:hover {
+  text-decoration: underline;
   background-color: lightgray;
 }
 .outer-wrap-footer {
@@ -5286,14 +5302,12 @@ hr::after {
   display: none;
 }
 .site-logo-text {
+  font-size: 2em;
+  padding-top: 1em;
   font-style: italic;
 }
-.region-flash img {
-  display: inline;
-  float: left;
-  width: 98.95833333%;
-  margin-left: 0.52083333%;
-  margin-right: 0.52083333%;
+.site-logo-text-icon {
+  display: none;
 }
 .outer-wrap-header a {
   text-decoration: none;
@@ -5305,16 +5319,19 @@ hr::after {
 .my-navbar li {
   display: inline;
 }
+.my-navbar a {
+  padding: 0.5em;
+}
 .my-navbar a:hover {
   text-decoration: underline;
-}
-.site-logo-text-icon {
-  display: none;
 }
 .rm-button-face-1,
 .outer-wrap.outer-wrap-header a,
 .outer-wrap.outer-wrap-header a:hover {
   color: #fff;
+}
+.rm-button-face-1 {
+  font-size: 24px;
 }
 .outer-wrap-header {
   background-color: #1d5937;
@@ -5328,9 +5345,11 @@ hr::after {
 .region-header-col-3 {
   display: inline;
   float: left;
-  width: 19.79166667%;
+  width: 15.625%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
+  margin-left: 4.6875%;
+  margin-bottom: 0.5em;
 }
 .region-header-col-2 {
   display: inline;
@@ -5341,14 +5360,34 @@ hr::after {
 }
 /* byline */
 .byline {
+  display: inline;
+  float: left;
+  width: 98.95833333%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
   clear: both;
-  border: 1px solid;
+  border: 1px dotted;
+  margin-left: 0;
+  padding: 0;
+}
+.byline img {
+  width: 90px;
+  border-radius: 50%;
+}
+.imgByline {
+  float: left;
+  padding: 0;
+  margin: 24px;
+}
+.textByline p {
+  margin: 1.5rem 1.5rem 1.5rem 0;
 }
 /* footer */
 .inner-wrap-footer {
   margin-right: auto;
   margin-left: auto;
-  max-width: 100%;
+  max-width: 1100px;
+  padding: 1.5rem 0;
   text-align: center;
 }
 .region-footer > .block {
@@ -5361,7 +5400,6 @@ hr::after {
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
   display: inline-block;
-  border-right: 1px solid;
   text-align: center;
 }
 .site-footer {
@@ -5370,6 +5408,7 @@ hr::after {
   width: 98.95833333%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
+  padding-top: 0.5em;
 }
 .footer-column:last-child {
   border-right: none;
@@ -5381,79 +5420,67 @@ hr::after {
 /**
  * Layout for responsive style through media queries.
  */
+/**
+ * Responsive 1,2,3 column layout.
+ */
 @media screen and (max-width: 1000px) {
-  /**
-     * Header
-     */
-  .site-logo {
-    display: none;
-  }
-  .site-logo-text-icon {
-    display: none;
-  }
-  .outer-wrap-header {
-    width: 100%;
-    padding-bottom: 1em;
-  }
-  /**
-     * Layout
-     */
   .region-main {
-    margin: 1em auto;
+    display: inline;
+    float: left;
+    width: 90.625%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+    margin-left: 4.6875%;
   }
-  .region-flash img {
-    width: 100%;
+  .region-main.has-sidebar-left.has-sidebar-left {
+    display: inline;
+    float: left;
+    width: 90.625%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+    margin-left: 4.6875%;
   }
-  .breadcrumb-list {
-    width: 100%;
+  .region-sidebar-right,
+  .region-sidebar-left {
+    display: inline;
+    float: left;
+    width: 90.625%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+    margin-left: 4.6875%;
   }
-  .inner-wrap-main .row {
-    flex-direction: column;
+  .region-sidebar-left.has-sidebar-right,
+  .region-sidebar-right.has-sidebar-left {
+    display: inline;
+    float: left;
+    width: 90.625%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+    margin-left: 4.6875%;
   }
-  .next-previous {
-    margin: 0 auto;
-    width: 80%;
+  .region-main.has-sidebar-right {
+    display: inline;
+    float: left;
+    width: 90.625%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+    margin-left: 4.6875%;
   }
-  .inner-wrap-main {
-    margin: 0 auto;
-    width: 100%;
-  }
-  .article {
-    margin: 0 auto;
-  }
-  .article p {
-    margin: 0.5em;
-  }
-  .stylechooser fieldset {
-    margin: auto;
-    width: auto;
-  }
-  .stylechooser select[name=stylechooser] {
-    width: 70%;
-  }
-  .block.toc {
-    display: none;
-  }
-  /**
-     * Byline
-     */
-  .byline {
-    margin: 0 auto;
-    width: 90%;
-    padding: inherit;
-  }
-  .byline img {
-    padding: 0;
-  }
-  .byline p {
-    padding: 0;
-  }
-  /**
-     * Footer
-     */
+}
+@media screen and (max-width: 650px) {
   .footer-column {
-    display: block;
-    border: none;
+    display: inline;
+    float: left;
+    width: 98.95833333%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+  }
+  .figure.right {
+    width: 250px;
+    float: none;
+  }
+  .figure.right img {
+    margin-bottom: 1em;
   }
 }
 /**
@@ -5594,7 +5621,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   background-color: #1d5937;
 }
 .rm-desktop li a:hover {
-  color: #1d5937;
+  color: inherit;
   background-color: inherit;
 }
 .rm-desktop li:hover > ul {
@@ -5721,7 +5748,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 /**
   * Example on media queries
   */
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 980px) {
   .rm-small {
     display: block;
   }
@@ -5729,11 +5756,58 @@ a.rm-button.rm-clicked .rm-button-face-2 {
     display: none;
   }
 }
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 980px) {
   .rm-small {
     display: none;
   }
 }
 /**
+* Internal self contained modules, save in directory module/.
+*/
+/**
+ * Style for the stylechooser.
+ */
+/**
+ * Variables
+ */
+/**
+ * Style
+ */
+.stylechooser {
+  display: inline;
+  float: left;
+  width: 98.95833333%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+}
+.stylechooser select[name=stylechooser] {
+  display: inline;
+  float: left;
+  width: 98.95833333%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+}
+/**
 * My own settings, not currently in their own module.
 */
+@font-face {
+  font-family: 'Acme';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Acme Regular'), local('Acme-Regular'), url(https://fonts.gstatic.com/s/acme/v9/RrQfboBx-C5_XxrBaw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Sintony';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Sintony'), url(https://fonts.gstatic.com/s/sintony/v7/XoHm2YDqR7-98cVUETMtvw.ttf) format('truetype');
+}

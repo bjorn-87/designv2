@@ -16,6 +16,7 @@
 }
 
 
+
 /**
 * Normalize and reset the style.
 */
@@ -29,14 +30,6 @@
 @import "@fortawesome/fontawesome-free/less/fontawesome.less";
 @import "@fortawesome/fontawesome-free/less/solid.less";
 @import "@fortawesome/fontawesome-free/less/brands.less";
-
-
-
-/**
-* Internal self contained modules, save in directory module/.
-*/
-// @import "module/kmom01.less";
-@import "module/stylechooser.less";  // Just an example module
 
 
 
@@ -55,7 +48,6 @@
 @import "@desinax/typographic-grid/less/typography-font-families.less";
 @import "@desinax/typographic-grid/less/typography-defaults.less";
 
-
 // Show the grid
 .hgrid .inner-wrap {
     @gridImage: "../img/magic-number-@{magicNumber}.png";
@@ -63,11 +55,13 @@
 }
 
 
+
 /**
  * Import the vertical grid.
  */
 @import "@desinax/vertical-grid/less/grid.less";
 @import "layout/vgrid.less";
+
 // // Default grid, change to fit your requirements.
 // @columnWidth:   30;
 // @gutterWidth:   10;
@@ -83,7 +77,7 @@
 
 // @import "layout/layout.less";
 // @import "layout/layout_kmom03.less";
-@import "layout/responsive.less";
+@import "layout/responsive_kmom03.less";
 @import "layout/regions.less";     // To add style for ?regions
 
 
@@ -97,13 +91,26 @@
 
 
 /**
+* Internal self contained modules, save in directory module/.
+*/
+// @import "module/kmom01.less";
+@import "module/stylechooser_kmom03.less";  // Just an example module
+
+
+
+/**
 * My own settings, not currently in their own module.
 */
 
+// Import fonts from google font.
+@import url('https://fonts.googleapis.com/css?family=Acme|Roboto|Sintony&display=swap');
 
+// font-family: 'Acme', sans-serif;
+// font-family: 'Sintony', sans-serif;
+// font-family: 'Roboto', sans-serif;
 
-@bgColorHtml: #424242;
-@bgColorBody: #fff;
+@bgColorHtml: #1d5937; //#424242;
+@bgColorBody: beige;
 @colorBody: #333;
 
 
@@ -113,6 +120,6 @@
 // @fontFamilyBody: serif;
 
 // Set font family to use
-@fontFamilyHeadings:  @fontFamilyCambria;
-@fontFamilyBody:      @fontFamilyCalibri;
+@fontFamilyHeadings:  'Roboto', sans-serif; // @fontFamilyGaramond;
+@fontFamilyBody:      'Sintony', 'Helvetica Neue', Helvetica, Arial, sans-serif; // @fontFamilyHelveticaNeue; //@fontFamilyHelvetica; // "Helvetica Neue" // @fontFamilyCalibri;
 @fontFamilyCode:      @fontFamilyCourier;

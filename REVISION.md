@@ -19,3 +19,15 @@ v2.0.0 (2019-11-20)
 
 
 * Finished kmom02
+
+
+v3.0.0 (2019-11-24)
+
+
+* Added H and V-grid
+
+
+v3.0.1 (2019-11-28)
+
+
+* Finished Kmom03

@@ -4986,7 +4986,7 @@ img {
 /**
  * Layout for responsive style through media queries.
  */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
   /**
      * Header
      */
@@ -5199,7 +5199,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   background-color: #1d5937;
 }
 .rm-desktop li a:hover {
-  color: #1d5937;
+  color: inherit;
   background-color: inherit;
 }
 .rm-desktop li:hover > ul {
@@ -5326,7 +5326,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 /**
   * Example on media queries
   */
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 980px) {
   .rm-small {
     display: block;
   }
@@ -5334,7 +5334,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
     display: none;
   }
 }
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 980px) {
   .rm-small {
     display: none;
   }
