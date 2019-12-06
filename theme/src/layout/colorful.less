@@ -1,0 +1,367 @@
+/**
+ * Layout dark theme using v-grid.
+ */
+
+/**
+ * Variables
+ */
+
+ @headerColor:  #fff; //#333;
+ @headerBgColor: #1d5937;
+ @mainBgColor: beige;
+ @footerBgColor: #1d5937;
+ @footerColor: #fff;
+ @aColor: #36ce1e;
+ @aHoverColor: #fff;
+ @hColor: #333;
+
+/**
+* General layout
+*/
+
+code {
+    background-color: inherit;
+}
+
+h1 {
+    color: @hColor;
+}
+
+.row {
+    max-width: 100%;
+    #desinax-vgrid.row();
+
+    // background-color: #0f0;
+    margin-bottom: 12px;
+}
+
+
+.inner-wrap-main,
+.inner-wrap-breadcrumb {
+    #desinax-vgrid.grid(1100px);
+}
+
+.vgrid .inner-wrap {
+    @gridImage: "../img/grid_24x30x10-nomargin.png";
+    //@gridImage: "../img/grid_12x60x20-nomargin.png";
+    #desinax-vgrid.showGrid(@gridImage, 1100px);
+
+    &.inner-wrap-header {
+        #desinax-vgrid.showGrid(@gridImage);
+    }
+}
+
+.breadcrumb-list li,
+.block .toc li {
+    list-style-type: none;
+    display: inline;
+}
+
+.next-previous {
+    #desinax-vgrid.column(@columns);
+    margin-bottom: 1.5em;
+}
+
+.breadcrumb-list a,
+.next-previous a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 4px 6px;
+    border-radius: 10px;
+    background-color: @aColor;
+}
+
+.breadcrumb-list a:hover,
+.next-previous a:hover {
+    color: #333;
+    font-weight: bold;
+    // text-decoration: underline;
+    padding: 4px 6px;
+    border-radius: 10px;
+    background-color: @aHoverColor;
+}
+
+.next {
+    // #desinax-vgrid.column(@columns / 2);
+    float: right;
+}
+
+.flashmessage.info {
+    border: 1px solid #ff6652;
+    #desinax-vgrid.column(@columns * 3 / 4);
+    #desinax-vgrid.push(3);
+    text-align: center;
+}
+
+.inner-wrap-flash {
+    #desinax-vgrid.grid(1100px);
+}
+.region-flash {
+    #desinax-vgrid.column(@columns);
+    background-image: url(../img/colorful.jpg);
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.region-flash img {
+    #desinax-vgrid.column(100%);
+    display: none;
+}
+
+.region-breadcrumb {
+    #desinax-vgrid.column(@columns);
+}
+
+.breadcrumb-list ul {
+    padding-top: 12px;
+}
+
+.breadcrumb-list li:last-child {
+    #desinax-vgrid.push(1);
+}
+
+.region-main {
+    #desinax-vgrid.column(@columns * 3 / 4);
+    #desinax-vgrid.push(3);
+    margin-bottom: 1.5rem;
+
+    &.has-sidebar {
+        #desinax-vgrid.push(0);
+    }
+
+    &.has-sidebar-right {
+        #desinax-vgrid.column(@columns * 3 / 4 - 1);
+    }
+
+    &.has-sidebar-left {
+        #desinax-vgrid.column(@columns * 3 / 4 - 1);
+        #desinax-vgrid.push(1);
+    }
+
+    &.has-sidebar-left.has-sidebar-right {
+        #desinax-vgrid.column(@columns * 3 / 4 - 4);
+    }
+}
+
+.region-sidebar-left,
+.region-sidebar-right {
+    #desinax-vgrid.column(@columns * 1 / 4);
+}
+
+.region-sidebar-right {
+    #desinax-vgrid.push(1);
+}
+
+.region-sidebar-left.has-sidebar-right,
+.region-sidebar-right.has-sidebar-left {
+    #desinax-vgrid.column(@columns * 1 / 4 - 1);
+}
+
+.inner-wrap-main {
+    background-color: @mainBgColor;
+    min-height: 600px;
+}
+
+.figure.right {
+    float: right;
+    margin-top: 0;
+}
+
+.figure {
+    margin-bottom: 24px;
+}
+.figure img {
+    margin-bottom: 16px;
+    border-radius: 20px;
+    border: 2px solid #45b0c9;
+}
+
+.toc li a {
+    display: block;
+}
+
+.block.toc h4 {
+    text-align: center;
+    background-color: @bgColorBody;
+}
+
+.block.toc a {
+    text-decoration: none;
+    color: @colorBody;
+    margin: 16px 0 24px;
+}
+
+.block.toc a:hover {
+    text-decoration: underline;
+    background-color: @bgColorBody;
+}
+
+.outer-wrap-footer {
+    background-color: @footerBgColor;
+    color: @footerColor;
+}
+
+.outer-wrap-footer a {
+    color: @footerColor;
+}
+
+/* Header */
+
+.site-logo {
+    display: none;
+}
+
+.site-logo-text {
+    font-family: @fontLogo;
+    font-size: 2em;
+    padding-top: 1em;
+    font-style: italic;
+}
+
+.site-logo-text-icon {
+    display: none;
+}
+
+.outer-wrap-header a {
+    text-decoration: none;
+}
+
+.my-navbar {
+    list-style-type: none;
+    text-align: center;
+}
+
+.my-navbar li {
+    display: inline;
+}
+
+.my-navbar a {
+    // font-size: 18px;
+    font-weight: bold;
+    padding: 0.5em;
+    font-family: @fontNavbar;
+}
+
+.rm-button-face-1,
+.outer-wrap.outer-wrap-header a {
+    color: @headerColor;
+}
+
+.my-navbar a:hover {
+    color: @aHoverColor;
+    text-decoration: underline;
+}
+
+.rm-button-face-1 {
+    font-size: 24px;
+}
+
+.outer-wrap-header {
+    background-color: @headerBgColor; //#5b4b41;
+}
+
+.inner-wrap-header {
+    #desinax-vgrid.grid(100%);
+}
+
+.region-header-col-1,
+.region-header-col-3 {
+    #desinax-vgrid.column(4);
+    #desinax-vgrid.push(1);
+    margin-bottom: 0.5em;
+}
+
+.region-header-col-2 {
+    #desinax-vgrid.column(14);
+}
+
+.rapportTable1 {
+    margin: 16px 0 36px;
+    border-spacing: 4px;
+    border-collapse: separate;
+}
+
+.rapportTable2 {
+    margin: 16px 0 32px;
+    border-spacing: 4px;
+    border-collapse: separate;
+}
+
+.rapportTable3 {
+    margin: 16px 0 24px;
+    border-spacing: 4px;
+    border-collapse: separate;
+}
+
+
+/* byline */
+
+.byline {
+    #desinax-vgrid.column(@columns);
+    // #desinax-vgrid.push(1);
+    clear: both;
+    border: 1px dotted;
+    margin-left: 0;
+    padding: 0;
+}
+
+.byline img {
+    width: 90px;
+    border-radius: 50%;
+}
+
+.imgByline {
+    float: left;
+    padding: 0;
+    margin: 24px;
+}
+
+.textByline p {
+    margin: 1.5rem 1.5rem 1.5rem 0;
+}
+
+/* footer */
+
+
+
+.inner-wrap-footer {
+    #desinax-vgrid.grid(1100px);
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.region-footer>.block {
+    text-align: center;
+}
+
+.region-footer a:hover {
+    color: #fff;
+}
+
+.footer-column {
+    #desinax-vgrid.column(@columns / 3);
+    // #desinax-vgrid.push(1);
+    display: inline-block;
+    // border-right: 1px solid;
+    text-align: center;
+}
+
+// .footer-column-1,
+// .footer-column-2,
+// .footer-column-3 {
+//     #desinax-vgrid.column(7);
+// }
+
+
+.site-footer {
+    #desinax-vgrid.column(@columns);
+    padding-top: 0.5em;
+}
+
+.footer-column:last-child {
+    border-right: none;
+}

@@ -1,0 +1,136 @@
+/*!
+* Stylesheet for design 04_minimalistic.
+*
+* This stylesheet is for the design course and kmom04 where we use LESS.
+*/
+
+
+
+/**
+ * Normalize and reset the style.
+ */
+@import "mixin/clearfix.less";
+
+.clearfix() {
+    #design-mixin.clearfix();
+}
+
+
+
+/**
+* Normalize and reset the style.
+*/
+@import "normalize.css/normalize.less";
+
+
+
+/**
+* Font Awesome.
+*/
+@import "@fortawesome/fontawesome-free/less/fontawesome.less";
+@import "@fortawesome/fontawesome-free/less/solid.less";
+@import "@fortawesome/fontawesome-free/less/brands.less";
+
+
+
+/**
+* Base style to affect HTML elements on a general scale.
+*/
+
+// @import "base/base.less";
+@import "base/base_kmom04.less";
+
+
+
+/**
+ * Import the typographic grid.
+ */
+@import "@desinax/typographic-grid/less/typography-font-families.less";
+@import "@desinax/typographic-grid/less/typography-defaults.less";
+
+// Show the grid
+.hgrid .inner-wrap {
+    @gridImage: "../img/magic-number-@{magicNumber}.png";
+    #desinax-hgrid.showGrid(@gridImage);
+}
+
+
+
+/**
+* A responsive menu.
+*/
+@import "@desinax/responsive-menu/less/responsive-menu.less";
+@import "@desinax/responsive-menu/less/media-queries.less";
+
+
+
+/**
+ * Import the vertical grid.
+ */
+@import "@desinax/vertical-grid/less/grid.less";
+@import "layout/minimalistic.less";
+
+// // Default grid, change to fit your requirements.
+// @columnWidth:   30;
+// @gutterWidth:   10;
+// @columns:       24;
+// @gridType:      "float"; // "flex"
+
+
+
+/**
+* Layout style for general structure of header, navbar, main, footer
+* and other regions of the page including route specific styles.
+*/
+
+
+
+@import "layout/responsive_kmom04_mini.less";
+@import "layout/regions.less";     // To add style for ?regions
+
+
+
+/**
+* Internal self contained modules, save in directory module/.
+*/
+// @import "module/kmom01.less";
+@import "module/stylechooser_kmom03.less";  // Just an example module
+
+
+
+/**
+* My own settings, not currently in their own module.
+*/
+
+// Import fonts from google font.
+@import url('https://fonts.googleapis.com/css?family=Acme|Roboto|Sintony&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Montserrat&display=swap');
+
+// font-family: 'Acme', sans-serif;
+// font-family: 'Sintony', sans-serif;
+// font-family: 'Roboto', sans-serif;
+
+@colorBody: #333;
+@headerColor:  #333; //#333;
+@footerColor: #333;
+
+@bgColorHtml: #ffffff; //#6b7d9a; //#424242;
+@bgColorBody: #ffffff; //#d4d9e2;
+@mainBgColor: #f6f6f6; //rgba(212, 217, 226, 0.5);
+@headerBgColor: #f6f6f6;
+@navbarItemBgColor: #f6f6f6;
+@maxBgColor: white;
+@maxButtonSubmenuBgColor: #fff;
+@footerBgColor: #c7c7c7; //#6b7d9a;
+
+// Magic number and base fontsize
+@magicNumber:  24px;  // 22px
+@fontSizeBody: 16px;
+// @fontFamilyBody: serif;
+
+// Set font family to use
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Cinzel', serif;
+@fontFamilyHeadings:  'Cinzel', serif; // @fontFamilyGaramond;
+@fontFamilyBody:      'Montserrat', sans-serif; // @fontFamilyHelveticaNeue; //@fontFamilyHelvetica; // "Helvetica Neue" // @fontFamilyCalibri;
+@fontFamilyCode:      @fontFamilyCourier;
