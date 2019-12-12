@@ -1,0 +1,135 @@
+/*!
+ * Stylesheet for design kmom05.
+ *
+ * This stylesheet is for the design course and kmom01. Fill it with style
+ * to style up the website so it is useable.
+ */
+
+ /**
+  * Variables
+  */
+
+
+  @mainBgColor: beige;
+  @footerBgColor: #1d5937;
+  @footerColor: #fff;
+  @aColor: #36ce1e;
+  @aHoverColor: #fff;
+
+
+.blog-post h1,
+.blog-post h2,
+.blog-post h3 {
+    clear: both;
+}
+
+ .breadcrumb-list li,
+ .block .toc li {
+     list-style-type: none;
+     display: inline;
+}
+
+
+.breadcrumb-list li {
+    border-right: 1px solid;
+    padding-right: 5px;
+}
+
+ .breadcrumb-list li:last-child {
+     border-right: none;
+}
+
+.breadcrumb-list a,
+.has-sidebar a,
+.next-previous a {
+    color: @aColor;
+    text-decoration: none;
+}
+
+.has-sidebar a:hover,
+.region-footer a:hover,
+.breadcrumb-list a:hover,
+.next-previous a:hover {
+    color: @aHoverColor;
+    text-decoration: underline;
+}
+
+.next {
+    // #desinax-vgrid.column(@columns / 2);
+    float: right;
+}
+
+.inner-wrap-main {
+    background-color: @mainBgColor;
+    min-height: 600px;
+}
+
+
+.figure {
+    margin-bottom: 24px;
+}
+
+.toc li a {
+    display: block;
+}
+
+.block.toc h4 {
+    text-align: center;
+    background-color: @bgColorBody;
+}
+
+.block.toc a {
+    text-decoration: none;
+    color: @aColor;
+    margin: 16px 0 24px;
+}
+
+.block.toc a:hover {
+     text-decoration: underline;
+     background-color: @ahoverBgColor;
+}
+
+.outer-wrap-footer {
+    background-color: @footerBgColor;
+    color: @footerColor;
+}
+
+.outer-wrap-footer a {
+    color: @footerColor;
+}
+
+
+.rapportTable1 {
+    margin: 16px 0 36px;
+    border-spacing: 4px;
+    border-collapse: separate;
+}
+
+.rapportTable2 {
+    margin: 16px 0 32px;
+    border-spacing: 4px;
+    border-collapse: separate;
+}
+
+.rapportTable3 {
+    margin: 16px 0 24px;
+    border-spacing: 4px;
+    border-collapse: separate;
+}
+
+/* byline */
+
+.byline img {
+    width: 90px;
+    border-radius: 50%;
+}
+
+.imgByline {
+    float: left;
+    padding: 0;
+    margin: 24px;
+}
+
+.textByline p {
+    margin: 1.5rem 1.5rem 1.5rem 0;
+}

@@ -15,7 +15,7 @@ Min me-sida i kursen design
 
 <!-- Detta innehåll är skrivet i markdown och du hittar innehållet i filen `content/index.md`. -->
 
-[FIGURE src="image/me.jpg?w=300" class="right" caption="Bild på mig"]
+[FIGURE src="image/me.jpg?w=300" class="right w33" alt="bild på mig" caption="Bild på mig"]
 
 Mitt namn är Björn Olsson, 32 år, född och uppvuxen i Tjautjas. En liten by
 3 mil norr om Gällivare. Bor för tillfället i Malmberget som ligger några kilometer utanför Gällivare.
