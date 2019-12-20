@@ -4743,13 +4743,13 @@ template {
 }
 html {
   overflow-y: scroll;
-  background-color: #333;
+  background-color: #4f8051;
 }
 body {
   margin: 0;
   padding: 0;
   color: #333;
-  background-color: #fff;
+  background-image: radial-gradient(circle, #4f8051, #ebffec);
   font: 16px/1.5 'Open Sans', sans-serif;
 }
 img {
@@ -4761,7 +4761,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Bree Serif', serif;
+  font-family: 'Roboto', sans-serif;
   margin-top: 24px;
   margin-bottom: 24px;
 }
@@ -5166,7 +5166,8 @@ code {
   width: 98.95833333%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
-  margin-bottom: 1.5em;
+  margin-bottom: 0;
+  margin-top: 1.5em;
 }
 .flashmessage.info {
   border: 1px solid green;
@@ -5184,12 +5185,14 @@ code {
   width: 415.625%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
-  background-image: url(../image/tjautjas.jpg?height=300&width=1920&crop-to-fit);
+  background-image: url(../image/forest.jpg?w=1920&a=0,0,50,0&sharpen);
   background-repeat: no-repeat;
   height: 300px;
   width: 100%;
   background-size: cover;
   background-position: center;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
 }
 .region-flash img {
   display: inline;
@@ -5205,9 +5208,7 @@ code {
   width: 98.95833333%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
-}
-.breadcrumb-list ul {
-  padding-top: 12px;
+  margin-left: 4.6875%;
 }
 .region-main {
   display: inline;
@@ -5216,7 +5217,7 @@ code {
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
   margin-left: 13.02083333%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 }
 .region-main.has-sidebar {
   margin-left: 0.52083333%;
@@ -5224,14 +5225,15 @@ code {
 .region-main.has-sidebar-right {
   display: inline;
   float: left;
-  width: 69.79166667%;
+  width: 65.625%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
+  margin-left: 4.6875%;
 }
 .region-main.has-sidebar-left {
   display: inline;
   float: left;
-  width: 69.79166667%;
+  width: 61.45833333%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
   margin-left: 4.6875%;
@@ -5239,7 +5241,7 @@ code {
 .region-main.has-sidebar-left.has-sidebar-right {
   display: inline;
   float: left;
-  width: 57.29166667%;
+  width: 48.95833333%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
 }
@@ -5250,6 +5252,7 @@ code {
   width: 23.95833333%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
+  margin-left: 4.6875%;
 }
 .region-sidebar-right {
   margin-left: 4.6875%;
@@ -5261,6 +5264,7 @@ code {
   width: 19.79166667%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
+  margin-left: 4.6875%;
 }
 .inner-wrap-header {
   margin-right: auto;
@@ -5292,9 +5296,10 @@ code {
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
   clear: both;
-  border: 1px dotted;
+  border-top: 1px solid black;
   margin-left: 0;
   padding: 0;
+  margin-top: 48px;
 }
 /* footer */
 .inner-wrap-footer {
@@ -5346,17 +5351,20 @@ code {
   list-style-type: none;
   display: inline;
 }
-.breadcrumb-list li {
-  border-right: 1px solid;
-  padding-right: 5px;
+.breadcrumb-list ul {
+  padding-top: 12px;
+  padding-left: 0px;
 }
-.breadcrumb-list li:last-child {
-  border-right: none;
+.breadcrumb-list ul li::after {
+  content: " /";
+}
+.breadcrumb-list ul li:last-child::after {
+  content: "";
 }
 .breadcrumb-list a,
 .has-sidebar a,
 .next-previous a {
-  color: blue;
+  color: #111;
   text-decoration: none;
 }
 .has-sidebar a:hover,
@@ -5366,7 +5374,7 @@ code {
   text-decoration: underline;
 }
 .region-footer a:hover {
-  color: #fff;
+  color: #ffd252;
   text-decoration: underline;
 }
 .next {
@@ -5376,28 +5384,51 @@ code {
   background-color: #fff;
   min-height: 600px;
 }
+.inner-wrap-breadcrumb {
+  background-color: #fff;
+}
 .figure {
   margin-bottom: 24px;
+  text-align: center;
+}
+.figure img {
+  border: 1px solid black;
+  border-radius: 50%;
 }
 .toc li a {
   display: block;
 }
+.toc ul {
+  padding-left: 0;
+}
 .block.toc h4 {
-  text-align: center;
-  background-color: #fff;
+  padding-left: 24px;
+  background-color: #ffd252;
 }
 .block.toc a {
   text-decoration: none;
-  color: blue;
+  color: #111;
   margin: 16px 0 24px;
+  padding-left: 24px;
 }
+.block .toc .selected a::after,
+.block .toc a:hover::after {
+  content: "";
+  display: inline-block;
+  border-top: 5px solid transparent;
+  border-left: 7px solid black;
+  border-bottom: 5px solid transparent;
+  margin-left: 10px;
+}
+.block.toc .selected a,
 .block.toc a:hover {
   text-decoration: underline;
-  background-color: #e8e8e8;
+  background-color: #ffd252;
 }
 .outer-wrap-footer {
-  background-color: #333;
+  background-color: #4f8051;
   color: #e8e8e8;
+  border-top: 1px solid black;
 }
 .outer-wrap-footer a {
   color: #e8e8e8;
@@ -5421,6 +5452,7 @@ code {
 .byline img {
   width: 90px;
   border-radius: 50%;
+  border: 1px solid black;
 }
 .imgByline {
   float: left;
@@ -5437,14 +5469,9 @@ code {
  * to style up the website so it is useable.
  */
 /* Header */
-.site-logo {
-  display: none;
-}
-.site-logo-text {
-  font-family: 'Bree Serif', serif;
-  font-size: 2em;
-  padding-top: 1em;
-  font-style: italic;
+h1 {
+  color: #ffd252;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .site-logo-text-icon {
   display: none;
@@ -5465,17 +5492,33 @@ code {
 }
 .rm-button-face-1,
 .outer-wrap.outer-wrap-header a {
-  color: #e8e8e8;
+  color: #fff;
 }
 .my-navbar a:hover {
-  color: #fff;
+  color: #ffd252;
   text-decoration: underline;
+}
+.rm-default .selected a,
+.rm-default .selected-parent a {
+  color: #ffd252;
+  text-decoration: underline;
+}
+.outer-wrap-header {
+  background-color: #3C613E;
+}
+.site-logo {
+  display: none;
+}
+.site-logo-text {
+  font-family: 'Bree Serif', serif;
+  font-size: 2em;
+  padding-top: 1em;
+  font-style: italic;
+  color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .rm-button-face-1 {
   font-size: 24px;
-}
-.outer-wrap-header {
-  background-color: #030202;
 }
 /**
 * Layout style for general structure of header, navbar, main, footer
@@ -5541,6 +5584,9 @@ code {
   }
   .figure.right img {
     margin-bottom: 1em;
+  }
+  .stylechooser code {
+    display: none;
   }
 }
 /**
@@ -5667,7 +5713,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
  * Menu layout for the desktop variant, usually full width of browser.
  */
 .rm-desktop ul {
-  background-color: #030202;
+  background-color: #3C613E;
 }
 .rm-desktop li {
   position: relative;
@@ -5678,10 +5724,10 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-desktop li a {
   color: inherit;
-  background-color: #030202;
+  background-color: #3C613E;
 }
 .rm-desktop li a:hover {
-  color: #fff;
+  color: #ffd252;
   background-color: inherit;
 }
 .rm-desktop li:hover > ul {

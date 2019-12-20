@@ -1,7 +1,7 @@
 /*!
-* Stylesheet for design Kmom05.
+* Stylesheet for design Kmom06 designprincip.
 *
-* This stylesheet is for the design course and kmom04 where we use LESS.
+* This stylesheet is for the design course and kmom06 where we use LESS.
 */
 /**
  * Normalize and reset the style.
@@ -4743,14 +4743,17 @@ template {
 }
 html {
   overflow-y: scroll;
-  background-color: #333;
+  background-color: rgba(45, 37, 104, 0.8);
 }
 body {
   margin: 0;
   padding: 0;
   color: #333;
-  background-color: #fff;
-  font: 16px/1.5 'Open Sans', sans-serif;
+  background-image: url(../image/wooden1920.jpg?q=70);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font: 16px/1.5 'Roboto', sans-serif;
 }
 img {
   max-width: 100%;
@@ -4761,7 +4764,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Bree Serif', serif;
+  font-family: 'Roboto', sans-serif;
   margin-top: 24px;
   margin-bottom: 24px;
 }
@@ -5149,14 +5152,12 @@ code {
     background-size: 1100px auto;
   }
 }
-.vgrid .inner-wrap.inner-wrap-header,
-.vgrid .inner-wrap.inner-wrap-flash {
+.vgrid .inner-wrap.inner-wrap-header {
   background: url("../img/grid_24x30x10-nomargin.png") repeat-y scroll center center;
   background-size: 100% auto;
 }
 @media (min-width: 100%) {
-  .vgrid .inner-wrap.inner-wrap-header,
-  .vgrid .inner-wrap.inner-wrap-flash {
+  .vgrid .inner-wrap.inner-wrap-header {
     background-size: 100% auto;
   }
 }
@@ -5166,10 +5167,12 @@ code {
   width: 98.95833333%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
-  margin-bottom: 1.5em;
+  margin-bottom: 0;
+  margin-top: 1.5em;
 }
 .flashmessage.info {
-  border: 1px solid green;
+  border: 2px solid green;
+  background-color: white;
   display: inline;
   float: left;
   width: 73.95833333%;
@@ -5177,19 +5180,12 @@ code {
   margin-right: 0.52083333%;
   margin-left: 13.02083333%;
   text-align: center;
+  margin-bottom: 24px;
 }
-.region-flash {
-  display: inline;
-  float: left;
-  width: 415.625%;
-  margin-left: 0.52083333%;
-  margin-right: 0.52083333%;
-  background-image: url(../image/tjautjas.jpg?height=300&width=1920&crop-to-fit);
-  background-repeat: no-repeat;
-  height: 300px;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
+.inner-wrap-flash {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1100px;
 }
 .region-flash img {
   display: inline;
@@ -5205,9 +5201,7 @@ code {
   width: 98.95833333%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
-}
-.breadcrumb-list ul {
-  padding-top: 12px;
+  margin-left: 4.6875%;
 }
 .region-main {
   display: inline;
@@ -5216,7 +5210,8 @@ code {
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
   margin-left: 13.02083333%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
+  margin-top: 96px;
 }
 .region-main.has-sidebar {
   margin-left: 0.52083333%;
@@ -5224,24 +5219,28 @@ code {
 .region-main.has-sidebar-right {
   display: inline;
   float: left;
-  width: 69.79166667%;
+  width: 65.625%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
+  margin-left: 4.6875%;
+  margin-top: 0;
 }
 .region-main.has-sidebar-left {
   display: inline;
   float: left;
-  width: 69.79166667%;
+  width: 61.45833333%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
   margin-left: 4.6875%;
+  margin-top: 0;
 }
 .region-main.has-sidebar-left.has-sidebar-right {
   display: inline;
   float: left;
-  width: 57.29166667%;
+  width: 48.95833333%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
+  margin-top: 0;
 }
 .region-sidebar-left,
 .region-sidebar-right {
@@ -5250,6 +5249,7 @@ code {
   width: 23.95833333%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
+  margin-left: 4.6875%;
 }
 .region-sidebar-right {
   margin-left: 4.6875%;
@@ -5261,6 +5261,7 @@ code {
   width: 19.79166667%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
+  margin-left: 4.6875%;
 }
 .inner-wrap-header {
   margin-right: auto;
@@ -5292,9 +5293,10 @@ code {
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
   clear: both;
-  border: 1px dotted;
+  border-top: 1px solid black;
   margin-left: 0;
-  padding: 0;
+  padding-top: 24px;
+  margin-top: 48px;
 }
 /* footer */
 .inner-wrap-footer {
@@ -5328,7 +5330,7 @@ code {
   border-right: none;
 }
 /*!
- * Stylesheet for design kmom05.
+ * Stylesheet for design kmom06 Designprincip.
  *
  * This stylesheet is for the design course and kmom01. Fill it with style
  * to style up the website so it is useable.
@@ -5346,17 +5348,20 @@ code {
   list-style-type: none;
   display: inline;
 }
-.breadcrumb-list li {
-  border-right: 1px solid;
-  padding-right: 5px;
+.breadcrumb-list ul {
+  padding-top: 12px;
+  padding-left: 0px;
 }
-.breadcrumb-list li:last-child {
-  border-right: none;
+.breadcrumb-list ul li::after {
+  content: " /";
+}
+.breadcrumb-list ul li:last-child::after {
+  content: "";
 }
 .breadcrumb-list a,
 .has-sidebar a,
 .next-previous a {
-  color: blue;
+  color: #4141ff;
   text-decoration: none;
 }
 .has-sidebar a:hover,
@@ -5366,7 +5371,7 @@ code {
   text-decoration: underline;
 }
 .region-footer a:hover {
-  color: #fff;
+  color: #ead58b;
   text-decoration: underline;
 }
 .next {
@@ -5375,29 +5380,69 @@ code {
 .inner-wrap-main {
   background-color: #fff;
   min-height: 600px;
+  box-shadow: 0px 15px 13px 10px rgba(34, 34, 34, 0.6);
+  margin-bottom: 96px;
+}
+.inner-wrap-breadcrumb {
+  background-color: #fff;
+  box-shadow: 0px 15px 13px 10px rgba(34, 34, 34, 0.6);
+  border-bottom: 1px solid;
 }
 .figure {
   margin-bottom: 24px;
+  text-align: center;
+  box-shadow: 0 5px 5px 5px #888;
+}
+.figure img {
+  padding: 1em;
+}
+.figure.me.right {
+  margin-top: 1.5em;
+  margin-left: 1.5em;
+  -o-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  /* IE 9 */
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  transform: rotate(5deg);
+  -webkit-backface-visibility: hidden;
 }
 .toc li a {
   display: block;
 }
+.toc ul {
+  padding-left: 0;
+}
 .block.toc h4 {
-  text-align: center;
-  background-color: #fff;
+  padding-left: 24px;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: #6f69a2;
+  color: #fff;
+  margin-top: 0;
 }
 .block.toc a {
   text-decoration: none;
-  color: blue;
+  color: #6f69a2;
   margin: 16px 0 24px;
+  padding-left: 24px;
 }
+.block.toc {
+  box-shadow: 0 5px 5px 5px #888;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding-bottom: 1.5em;
+}
+.block.toc .selected a,
 .block.toc a:hover {
   text-decoration: underline;
-  background-color: #e8e8e8;
+  background-color: #6f69a2;
+  color: #fff;
 }
 .outer-wrap-footer {
-  background-color: #333;
+  background-color: rgba(45, 37, 104, 0.8);
   color: #e8e8e8;
+  box-shadow: inset -1px 8px 13px 10px rgba(34, 34, 34, 0.6);
 }
 .outer-wrap-footer a {
   color: #e8e8e8;
@@ -5420,31 +5465,33 @@ code {
 /* byline */
 .byline img {
   width: 90px;
-  border-radius: 50%;
 }
 .imgByline {
+  -o-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  -webkit-backface-visibility: hidden;
+  box-shadow: 0px 5px 5px 5px #888;
+  padding: 1em;
   float: left;
-  padding: 0;
   margin: 24px;
 }
 .textByline p {
   margin: 1.5rem 1.5rem 1.5rem 0;
 }
 /*!
- * Stylesheet for design kmom01.
+ * Stylesheet for design kmom06 Designprincip.
  *
  * This stylesheet is for the design course and kmom01. Fill it with style
  * to style up the website so it is useable.
  */
 /* Header */
-.site-logo {
-  display: none;
-}
-.site-logo-text {
-  font-family: 'Bree Serif', serif;
-  font-size: 2em;
-  padding-top: 1em;
-  font-style: italic;
+h1 {
+  color: #4b4486;
+  margin-bottom: 46px;
 }
 .site-logo-text-icon {
   display: none;
@@ -5461,21 +5508,39 @@ code {
 }
 .my-navbar a {
   padding: 0.5em;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .rm-button-face-1,
 .outer-wrap.outer-wrap-header a {
-  color: #e8e8e8;
+  color: #fff;
 }
 .my-navbar a:hover {
-  color: #fff;
+  color: #ead58b;
   text-decoration: underline;
+}
+.rm-default .selected a,
+.rm-default .selected-parent a {
+  color: #ead58b;
+  text-decoration: underline;
+}
+.outer-wrap-header {
+  background-color: #4b4486;
+  margin-bottom: 96px;
+  box-shadow: 0 5px 13px 10px rgba(34, 34, 34, 0.6);
+}
+.site-logo {
+  display: none;
+}
+.site-logo-text {
+  font-family: 'Roboto', serif;
+  font-size: 2em;
+  padding-top: 1em;
+  font-style: italic;
+  color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .rm-button-face-1 {
   font-size: 24px;
-}
-.outer-wrap-header {
-  background-color: #030202;
 }
 /**
 * Layout style for general structure of header, navbar, main, footer
@@ -5541,6 +5606,16 @@ code {
   }
   .figure.right img {
     margin-bottom: 1em;
+  }
+  .stylechooser code {
+    display: none;
+  }
+  .region-breadcrumb {
+    display: inline;
+    float: left;
+    width: 98.95833333%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
   }
 }
 /**
@@ -5667,7 +5742,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
  * Menu layout for the desktop variant, usually full width of browser.
  */
 .rm-desktop ul {
-  background-color: #030202;
+  background-color: #4b4486;
 }
 .rm-desktop li {
   position: relative;
@@ -5678,10 +5753,10 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-desktop li a {
   color: inherit;
-  background-color: #030202;
+  background-color: #4b4486;
 }
 .rm-desktop li a:hover {
-  color: #fff;
+  color: #ead58b;
   background-color: inherit;
 }
 .rm-desktop li:hover > ul {
@@ -6048,3 +6123,10 @@ figure.figure-codepen {
   font-display: swap;
   src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0e.ttf) format('truetype');
 }
+/*!
+ * Variables for design kmom06 Designprincip.
+ *
+ * This stylesheet is for the design course and kmom01. Fill it with style
+ * to style up the website so it is useable.
+ */
+/* Header */

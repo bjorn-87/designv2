@@ -4743,7 +4743,7 @@ template {
 }
 html {
   overflow-y: scroll;
-  background-color: white;
+  background-color: #333;
 }
 body {
   margin: 0;
@@ -5360,10 +5360,13 @@ code {
   text-decoration: none;
 }
 .has-sidebar a:hover,
-.region-footer a:hover,
 .breadcrumb-list a:hover,
 .next-previous a:hover {
   color: #333;
+  text-decoration: underline;
+}
+.region-footer a:hover {
+  color: #fff;
   text-decoration: underline;
 }
 .next {

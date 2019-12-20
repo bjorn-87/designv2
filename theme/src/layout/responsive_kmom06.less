@@ -1,0 +1,165 @@
+/**
+ * Layout for responsive style through media queries.
+ */
+
+
+/**
+ * Responsive 1,2,3 column layout.
+ */
+
+@media screen and (max-width: 1000px) {
+    .region-main {
+        #desinax-vgrid.column(@columns - 2);
+        #desinax-vgrid.push(1);
+
+        &.has-sidebar-left.has-sidebar-left {
+            #desinax-vgrid.column(@columns - 2);
+            #desinax-vgrid.push(1);
+        }
+    }
+
+    .region-sidebar-right,
+    .region-sidebar-left {
+        #desinax-vgrid.column(@columns - 2);
+        #desinax-vgrid.push(1);
+    }
+
+    .region-sidebar-left.has-sidebar-right,
+    .region-sidebar-right.has-sidebar-left {
+        #desinax-vgrid.column(@columns - 2);
+        #desinax-vgrid.push(1);
+    }
+
+    .region-main.has-sidebar-right {
+        #desinax-vgrid.column(@columns - 2);
+        #desinax-vgrid.push(1);
+    }
+}
+
+// @media screen and (max-width: 850px) {
+//     .region-main.has-sidebar-right {
+//         #desinax-vgrid.column(@columns - 2);
+//         #desinax-vgrid.push(1);
+//     }
+
+//     .region-sidebar-right {
+//         #desinax-vgrid.column(@columns - 2);
+//         #desinax-vgrid.push(1);
+//     }
+// }
+
+
+@media screen and (max-width: 650px) {
+    .footer-column {
+        #desinax-vgrid.column(@columns);
+    }
+
+    .figure.right img {
+        margin-bottom: 1em;
+    }
+
+    .stylechooser code {
+        display: none;
+    }
+}
+
+
+
+//
+// @media screen and (max-width: 1100px) {
+//
+//     /**
+//      * Header
+//      */
+//
+//     .site-logo {
+//         display: none;
+//     }
+//
+//     .site-logo-text-icon {
+//         display: none;
+//     }
+//
+//     .outer-wrap-header {
+//         width: 100%;
+//         padding-bottom: 1em;
+//     }
+//
+//     /**
+//      * Layout
+//      */
+//
+//     .region-main {
+//         margin: 1em auto;
+//     }
+//
+//     .region-flash img {
+//         width: 100%;
+//     }
+//
+//     .breadcrumb-list {
+//         width: 100%;
+//     }
+//
+//     .inner-wrap-main .row {
+//         flex-direction: column;
+//     }
+//
+//     .next-previous {
+//         margin: 0 auto;
+//         width: 80%;
+//     }
+//
+//     .inner-wrap-main {
+//         margin: 0 auto;
+//         width: 100%;
+//     }
+//
+//     .article {
+//         margin: 0 auto;
+//     }
+//
+//     .article p {
+//         margin: 0.5em;
+//     }
+//
+//     .stylechooser fieldset {
+//         margin: auto;
+//         width: auto;
+//     }
+//
+//     .stylechooser select[name=stylechooser] {
+//         width: 70%;
+//     }
+//
+//     .block.toc {
+//         display: none;
+//     }
+//
+//     /**
+//      * Byline
+//      */
+//
+//     .byline {
+//         margin: 0 auto;
+//         width: 90%;
+//         padding: inherit;
+//     }
+//
+//     .byline img {
+//         padding: 0;
+//     }
+//
+//     .byline p {
+//         padding: 0;
+//     }
+//
+//     /**
+//      * Footer
+//      */
+//
+//     .footer-column {
+//         display: block;
+//         border: none;
+//     }
+// }

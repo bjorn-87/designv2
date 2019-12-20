@@ -1,0 +1,209 @@
+/*!
+ * Stylesheet for design kmom06 Designprincip.
+ *
+ * This stylesheet is for the design course and kmom01. Fill it with style
+ * to style up the website so it is useable.
+ */
+
+ /**
+  * Variables
+  */
+
+
+@mainBgColor: beige;
+@footerBgColor: #1d5937;
+@footerColor: #fff;
+@aColor: #36ce1e;
+@aHoverColor: #fff;
+@footeraHoverColor: #eee;
+@tocColor: #333;
+@tocHoverBgColor: #333;
+@tocHoverColor: #333;
+
+.blog-post h1,
+.blog-post h2,
+.blog-post h3 {
+    clear: both;
+}
+
+ .breadcrumb-list li,
+ .block .toc li {
+     list-style-type: none;
+     display: inline;
+}
+
+.breadcrumb-list ul {
+    padding-top: 12px;
+    padding-left: 0px;
+}
+
+.breadcrumb-list ul li::after {
+  content: " /";
+}
+
+.breadcrumb-list ul li:last-child::after {
+  content: "";
+}
+
+.breadcrumb-list a,
+.has-sidebar a,
+.next-previous a {
+    color: @aColor;
+    text-decoration: none;
+}
+
+.has-sidebar a:hover,
+.breadcrumb-list a:hover,
+.next-previous a:hover {
+    color: @aHoverColor;
+    // border-radius: 10px;
+    text-decoration: underline;
+}
+
+.region-footer a:hover {
+    color: @footeraHoverColor;
+    text-decoration: underline;
+}
+
+.next {
+    // #desinax-vgrid.column(@columns / 2);
+    float: right;
+}
+
+
+.inner-wrap-main {
+    background-color: @mainBgColor;
+    min-height: 600px;
+    box-shadow: 0px 15px 13px 10px rgba(34, 34, 34, 0.6);
+    margin-bottom: 96px;
+}
+
+.inner-wrap-breadcrumb {
+    background-color: @mainBgColor;
+    box-shadow: 0px 15px 13px 10px rgba(34, 34, 34, 0.6);
+    border-bottom: 1px solid;
+}
+
+.figure {
+    margin-bottom: 24px;
+    text-align: center;
+    box-shadow: 0 5px 5px 5px #888;
+}
+
+.figure img {
+    padding: 1em;
+}
+
+.figure.me.right {
+    margin-top: 1.5em;
+    margin-left: 1.5em;
+    -o-transform: rotate(5deg);
+    -ms-transform: rotate(5deg); /* IE 9 */
+    -webkit-transform: rotate(5deg); //safari
+    -moz-transform: rotate(5deg);
+    transform: rotate(5deg);
+    -webkit-backface-visibility: hidden;
+}
+
+.toc li a {
+    display: block;
+}
+
+.toc ul {
+    padding-left: 0;
+}
+
+.block.toc h4 {
+    padding-left: 24px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    background-color: @tocHoverBgColor;
+    color: @tocHoverColor;
+    margin-top: 0;
+}
+
+.block.toc a {
+    text-decoration: none;
+    color: @tocColor;
+    margin: 16px 0 24px;
+    padding-left: 24px;
+}
+
+// .block.toc.selected a::after,
+// .block.toc a:hover::after {
+//     content: "";
+//     display: inline-block;
+//     border-top: 5px solid transparent;
+//     border-left: 7px solid black;
+//     border-bottom: 5px solid transparent;
+//     margin-left: 10px;
+// }
+
+.block.toc {
+    box-shadow: 0 5px 5px 5px #888;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding-bottom: 1.5em;
+}
+
+.block.toc .selected a,
+.block.toc a:hover {
+     text-decoration: underline;
+     background-color: @tocHoverBgColor;
+     color: @tocHoverColor;
+     // border-top-right-radius: 10px;
+     // border-bottom-right-radius: 10px;
+     // border-bottom: 2px solid @ahoverBgColor;
+}
+
+.outer-wrap-footer {
+    background-color: @footerBgColor;
+    color: @footerColor;
+    box-shadow: inset -1px 8px 13px 10px rgba(34, 34, 34, 0.6);
+}
+
+.outer-wrap-footer a {
+    color: @footerColor;
+}
+
+
+.rapportTable1 {
+    margin: 16px 0 36px;
+    border-spacing: 4px;
+    border-collapse: separate;
+}
+
+.rapportTable2 {
+    margin: 16px 0 32px;
+    border-spacing: 4px;
+    border-collapse: separate;
+}
+
+.rapportTable3 {
+    margin: 16px 0 24px;
+    border-spacing: 4px;
+    border-collapse: separate;
+}
+
+/* byline */
+
+.byline img {
+    width: 90px;
+}
+
+.imgByline {
+    -o-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg); /* IE 9 */
+    -webkit-transform: rotate(-5deg); //safari
+    transform: rotate(-5deg);
+    -webkit-backface-visibility: hidden;
+    box-shadow: 0px 5px 5px 5px #888;
+    padding: 1em;
+    float: left;
+    margin: 24px;
+}
+
+.textByline p {
+    margin: 1.5rem 1.5rem 1.5rem 0;
+}
